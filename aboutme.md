@@ -1,16 +1,17 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Some more info about myself
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Connell McGinley.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I live in Belfast, N.Ireland. I work in IT and have been enjoying learning about Cyber Security recently (2019).
 
-What else do you need?
+I decided to create this site with some blog posts about my journey through learning Cyber Security, as well as other stuff.
+
+
 
 ### my history
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+
