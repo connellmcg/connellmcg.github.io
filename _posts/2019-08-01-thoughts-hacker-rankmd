@@ -1,0 +1,22 @@
+---
+layout: post
+title: Thoughts on Reaching Hacker Rank on HackTheBox
+subtitle: 
+bigimg: /img/path.jpg
+tags: [cyber security]
+---
+
+For those that don’t know, HackTheBox is a website which hosts around 20 live ‘boxes’ (read servers) for cyber security enthusiasts to practise their hacking skills. Points are awarded based on the difficulty of the box and the level of access one secures.
+I have been practising using this site for around six — eight weeks now, and have found it really useful for building up a knowledge and a toolkit of sorts for performing these tasks. I managed to reach the rank of Hacker this evening — My stats show I have 34 points, made up of five systems hacked in their entirety and six user accounts owned.
+
+At this stage i would actually be reluctant to call myself a hacker. The website is very CTF (Capture the Flag) oriented and not really real world like. For example, one challenge involved analysing an image on a web page for hidden data within it, which turned out to point to the next clue. This would never be a real world scenario, so you can kinda see how this site is more for those who like the puzzles rather than the actual pen testing.
+I do enjoy it though; I’ve found I get lost in the challenge and then I’ll check my phone and see I’ve not responded to texts for an hour and so on. The site is really good as it gamifies the process of hacking, so I’ve definitely learnt a ton in the last while. There’s even stuff I’ve learnt that is directly applicable to my day job, for example the analysing of web requests/headers and their responses has helped me diagnose issues with a web based application that I work with.
+I have built a methodology of sorts by running tools such as nmap and more specific tools or scripts based on the results of nmap to ‘enumerate’ the boxes.
+
+An example of nmap with the vulnerability scan argument used
+I have opted for the green text on a black terminal because it makes me feel like I am actually legit at this.
+I find gaining the initial foothold to a server to be the difficult part. The vuln scan will show a CVE that may or may not work. I’ll be off to exploit-db to research the vulnerability further and then with a bit of luck, I can use that to get the initial foothold.
+From there on in, one of the main things I look for are incorrectly configured service accounts. Often times a ps aux command or a run of psspy will show a service such as the MySQL daemon running under administrator credentials, rather than a locked down service account, so from that point it can be as trivial as launching a shell console from within the application and elevating to the root account from there.
+If the user account allows for the use of wget or curl, you can set up a webserver on your own machine with the ‘python -m SimpleHTTPServer 9090’ command to deliver nefarious applications or to upload a compiled socat binary in order to get an elevated TTY shell. The amazing thing is that there are ways of making webservers do this by sending them POST requests. (If there are lax controls in place).
+All a bit of an eye opener but it’s definitely good to know about this stuff.
+I’ll keep at this and after the holidays are over, I think I’ll be investing in the Virtual Hacking Labs three month pass to get experience with more realistic type boxes — it would be good to practice on more Windows servers as opposed to linux machines. Fun fun fun :D
