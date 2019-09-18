@@ -14,7 +14,7 @@ I decided to create this site with some blog posts about my journey through lear
 
 ### This Site
 
-This site is hosted on github pages, built on [Jekyll](https://jekyllrb.com/). Statically served, no DB calls or bloated plugins to worry about :)
+This site is hosted on [Github Pages](https://pages.github.com), built on [Jekyll](https://jekyllrb.com/). Statically served, no DB calls or bloated plugins to worry about :)
 
 Theme is beautiful-jekyll
 
