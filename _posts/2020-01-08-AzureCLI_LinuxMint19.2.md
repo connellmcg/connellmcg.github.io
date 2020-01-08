@@ -18,6 +18,6 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO 
    
 Run apt-get update, then sudo apt-get install azure-cli
 
-![azurecli_screenshot](/assets/azurecli.jpg)
+![azurecli_screenshot](/img/azurecli.jpg)
     
 Happy Azuring!
