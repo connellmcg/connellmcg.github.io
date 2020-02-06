@@ -1,6 +1,7 @@
 Today I completed my Azure Security Engineer Associate exam and I just wanted to write a quick review of how I found it and the learning material I used.
 
 Learning Material
+
 I will outline the material that I used, or think should be used, in a sort of chronological order.
 
 1. The exam objectives PDF (Skills Outlined) should be the starting point for any Microsoft exam. The objectives are regularly updated and noted in this PDF so it’s worth checking each week as you prepare for the exam.
@@ -18,7 +19,9 @@ I will outline the material that I used, or think should be used, in a sort of c
 The Exam
 
 The first time I did the exam, I scheduled it for December 31st and spent time going over the material over Christmas. When it came to the actual exam, it was a bit of a disaster. My lab seemed not to load correctly and then when it did, I had issues which lead to the exam being revoked. I was really annoyed but I think this was a blessing in disguise as I had more time to study. I was awarded another voucher by Pearson VUE as they admitted the issues were on their end.
+
 Naturally this lead to a lot of anxiety about the lab environment in the exam so I really drilled down on the labs on the Microsoft Learning Github to get confident for the labs in the exam. I think this effort may have been in vain as I wasn’t presented with a lab environment for my retake. I am not sure why — possibly it was pulled due to the issues with the labs? I had heard of others complain of similar issues so I wouldn't be surprised if this was the case.
+
 So as you can see, my retake was only multiple choice questions and then a scenario setting at the end with additional questions. I can’t go too much into what the questions were but I’d say if you follow the process outlined above you should be good to have a crack at it.
 
 Good luck!
