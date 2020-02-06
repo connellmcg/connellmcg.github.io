@@ -1,3 +1,13 @@
+---
+layout: post
+title: Preparing for the Azure Security Engineer AZ-500 Certification
+subtitle: A quick prep guide
+tags: [azure]
+comments: true
+---
+
+I have Linux Mint 19.2 (Tina) installed on my workstation. I was trying to get the Azure CLI installed on this machine using the Microsoft guide at [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
+
 Today I completed my Azure Security Engineer Associate exam and I just wanted to write a quick review of how I found it and the learning material I used.
 
 Learning Material
