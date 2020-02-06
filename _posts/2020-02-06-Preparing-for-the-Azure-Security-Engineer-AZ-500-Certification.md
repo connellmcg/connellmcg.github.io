@@ -18,11 +18,11 @@ I will outline the material that I used, or think should be used, in a sort of c
 
 3. [Microsoft Learn website](https://docs.microsoft.com/en-us/learn/azure/) has plenty of material on the exam objectives. If you look at the learning paths, it should guide you. It’s also worth looking at the additional paths regarding the administration of containers and networking options in Azure in general.
 
-4. [Thomas Thornton’s Blog](https://thomasthornton.cloud/2019/08/23/microsoft-azure-exam-az-500-study-guide/) on the exam objectives. Tommy has gone through the exam objectives PDF and has actually linked specifically to the areas in the Microsoft Documentation that you can review to understand
+4. [Thomas Thornton’s Blog](https://thomasthornton.cloud/2019/08/23/microsoft-azure-exam-az-500-study-guide/) on the exam objectives. Tommy has gone through the exam objectives PDF and has actually linked specifically to the areas in the Microsoft Documentation that you can review to understand more about any topic you are weak in.
 
 5. For the lab exercises, I went through the lab exercises and modules on the [Microsoft Learning Github](https://github.com/MicrosoftLearning/AZ-500-Azure-Security). You will get to practice with deployment scripts and command line options, probably more so than you need in the exam, but I think it really helps build a good overview of Azure and how you can use it. I found this to be the most time consuming but I think this is what helped me the most.
 
-6. As you get closer to the exam, I recommend [Whizlabs](https://www.whizlabs.com/) exam preparation — there are three sets of exam questions here which cover all the topics needed. I found this useful to gauge where I was weak and which subjects I should brush on. You can go back and revisit Thomas’ blog for detail or do the lab exercises to drill home on the weak points.
+6. As you get closer to the exam, I recommend [Whizlabs](https://www.whizlabs.com/) exam preparation — there are three sets of exam questions here which cover all the topics needed. I found this useful to gauge where I was weak and which subjects I should brush up on. You can go back and revisit Thomas’ blog for detail or do the lab exercises to drill home on the weak points.
 
 **The Exam**
 
