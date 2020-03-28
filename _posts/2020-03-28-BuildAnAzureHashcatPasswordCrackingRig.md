@@ -40,7 +40,7 @@ Choose Ubuntu 18 LTS, and the Size “Standard NC6_Promo”.
 
 ![screenshot](/img/crack_09.jpg)
 
-**Step 10.** `lspci` to confirm the Tesla 10 driver is installed
+**Step 10.** `lspci` to confirm the Tesla K80 driver is installed
 
 ![screenshot](/img/crack_10.jpg)
 
