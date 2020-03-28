@@ -6,9 +6,9 @@ tags: [azure, security]
 comments: true
 ---
 
-I enjoy doing capture the flag boxes on sites like HackTheBox.eu, hoever I do come across the need for cracking passwords from time to time. My own graphics card is about ten years old and isn't suit at all for cracking. 
+I enjoy doing capture the flag boxes on sites like [HackTheBox.eu](http://www.hackthebox.eu), however I do come across the need for cracking passwords from time to time. My own graphics card is about ten years old and isn't suited at all for password cracking. 
 
-I decided to check out the Azure N Series VMs as they have GPUs allocated, and had success. I managed to take my time to crack SHA256 hashes with rockyou.txt from approx 8 hours down to 16 minutes. :)
+I decided to check out the Azure N Series VMs as they have GPUs allocated and had success. I managed to take my time to crack SHA256 hashes with rockyou.txt from approx 8 hours down to 16 minutes. :)
 
 I had some issues installing the NVidia drivers, but managed to sort it out in step.
 
