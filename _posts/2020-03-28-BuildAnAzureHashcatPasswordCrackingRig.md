@@ -44,28 +44,29 @@ Choose Ubuntu 18 LTS, and the Size “Standard NC6_Promo”.
 If you get the below problem, you can fix it using the following commands:
 
 `sudo dpkg -i --force-overwrite /var/cache/apt/archives/nvidia-440_440.64.00-0ubuntu1_amd64.deb`
+
 `sudo apt-get --fix-broken install`
+
 `sudo apt-get upgrade`
 
-![screenshot](/img/crack_11.jpg)
-
-12.
-
 ![screenshot](/img/crack_12.jpg)
-13.
 
-14.
+12. Reboot the VM.
+
+13. Verify driver install with `nvidia-smi`
+
 ![screenshot](/img/crack_14.jpg)
 
-15.
+14. `sudo apt install hashcat`
 
-16.
+15. `wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt`
 ![screenshot](/img/crack_16.jpg)
-17
+
+16. `hashcat -m 1800 <your hashfile> -o cracked.txt wordlists/rockyou.txt -w 3 -O`
+
 ![screenshot](/img/crack_17_01.jpg)
 
 ![screenshot](/img/crack_17_02.jpg)
 
 
-    
 Happy Cracking!
