@@ -12,7 +12,7 @@ I decided to check out the Azure N Series VMs as they have GPUs allocated and ha
 
 I had some issues installing the NVidia drivers, but managed to sort it out in Step 11.
 
-**Step 1.** Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
+**Step 1.** Create a Resource Group.
 
 ![screenshot](/img/crack_01.jpg)
 
