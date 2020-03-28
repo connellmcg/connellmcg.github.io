@@ -12,7 +12,7 @@ I decided to check out the Azure N Series VMs as they have GPUs allocated, and h
 
 I had some issues installing the NVidia drivers, but managed to sort it out in step.
 
-**Step 1.** 8 Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
+**Step 1.** Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
 
 ![screenshot](/img/crack_01.jpg)
 
@@ -44,7 +44,7 @@ Choose Ubuntu 18 LTS, and the Size “Standard NC6_Promo”.
 
 ![screenshot](/img/crack_10.jpg)
 
-**Step 11.** Install the Nvidia Drivers following this guide: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup
+**Step 11.** Install the Nvidia Drivers following this guide: [N Series Driver Setup](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup)
 
 If you get the below problem, you can fix it using the following commands:
 
