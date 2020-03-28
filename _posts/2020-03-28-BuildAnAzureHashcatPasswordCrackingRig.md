@@ -10,7 +10,7 @@ I enjoy doing capture the flag boxes on sites like [HackTheBox.eu](http://www.ha
 
 I decided to check out the Azure N Series VMs as they have GPUs allocated and had success. I managed to take my time to crack SHA256 hashes with rockyou.txt from approx 8 hours down to 16 minutes. :)
 
-I had some issues installing the NVidia drivers, but managed to sort it out in step.
+I had some issues installing the NVidia drivers, but managed to sort it out in Step 11.
 
 **Step 1.** Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
 
