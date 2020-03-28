@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build an Azure Hashcat Password Cracking Rig
+title: Build an Azure GPU Hashcat Password Cracking Rig
 subtitle: A guide to configuring a Hashcat Azure VM Instance
 tags: [azure, security]
 comments: true
