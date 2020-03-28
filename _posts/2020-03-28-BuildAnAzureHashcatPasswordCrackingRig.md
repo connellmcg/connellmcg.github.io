@@ -2,7 +2,7 @@
 layout: post
 title: Build an Azure Hashcat Password Cracking Rig
 subtitle: A quick prep guide
-tags: [azure]
+tags: [azure], [security]
 comments: true
 ---
 
