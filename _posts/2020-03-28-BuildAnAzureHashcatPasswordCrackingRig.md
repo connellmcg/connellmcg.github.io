@@ -12,34 +12,39 @@ I decided to check out the Azure N Series VMs as they have GPUs allocated, and h
 
 I had some issues installing the NVidia drivers, but managed to sort it out in step.
 
-1. Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
+**Step 1.** 8 Create a Resource Group. Pick East US to get the option of choosing the GPU VMs.
 
 ![screenshot](/img/crack_01.jpg)
 
-2. Add a VM in the Resource Group
+**Step 2.** Add a VM in the Resource Group
+
 Choose Ubuntu 18 LTS, and the Size “Standard NC6_Promo”.
 
 ![screenshot](/img/crack_02.jpg)
-3. Choose the password options and set up your details.
 
-4. Disks – Choose Standard SSD.
+**Step 3.** Choose the password options and set up your details.
 
-5. Networking – Leave the defaults, but enure “Public Inbound Ports” is set to SSH (22).
+**Step 4.** Disks – Choose Standard SSD.
 
-6. Management – Unset the Boot Diagnostics.
+**Step 5.** Networking – Leave the defaults, but enure “Public Inbound Ports” is set to SSH (22).
 
-7. Review and Create – Select Create to create your VM.
+**Step 6.** Management – Unset the Boot Diagnostics.
 
-8. When your VM has been created, open the VM from the Azure Portal and take note of the “Public IP Address”.
+**Step 7.** Review and Create – Select Create to create your VM.
+
+**Step 8.** When your VM has been created, open the VM from the Azure Portal and take note of the “Public IP Address”.
 
 ![screenshot](/img/crack_08.jpg)
-9. SSH to your VM
+
+**Step 9.** SSH to your VM
 
 ![screenshot](/img/crack_09.jpg)
-10. `lspci` to confirm the Tesla 10 driver is installed
+
+**Step 10.** `lspci` to confirm the Tesla 10 driver is installed
 
 ![screenshot](/img/crack_10.jpg)
-11. Install the Nvidia Drivers following this guide: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup
+
+**Step 11.** Install the Nvidia Drivers following this guide: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup
 
 If you get the below problem, you can fix it using the following commands:
 
@@ -51,22 +56,23 @@ If you get the below problem, you can fix it using the following commands:
 
 ![screenshot](/img/crack_12.jpg)
 
-12. Reboot the VM.
+**Step 12.** Reboot the VM.
 
-13. Verify driver install with `nvidia-smi`
+**Step 13.** Verify driver install with `nvidia-smi`
 
 ![screenshot](/img/crack_14.jpg)
 
-14. `sudo apt install hashcat`
+**Step 14.** `sudo apt install hashcat`
 
-15. `wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt`
+**Step 15.** `wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt`
+
 ![screenshot](/img/crack_16.jpg)
 
-16. `hashcat -m 1800 <your hashfile> -o cracked.txt wordlists/rockyou.txt -w 3 -O`
+**Step 16.** `hashcat -m 1800 <your hashfile> -o cracked.txt wordlists/rockyou.txt -w 3 -O`
 
-![screenshot](/img/crack_17_01.jpg)
+ ![screenshot](/img/crack_17_01.jpg)
 
-![screenshot](/img/crack_17_02.jpg)
+ ![screenshot](/img/crack_17_02.jpg)
 
 
 Happy Cracking!
