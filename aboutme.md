@@ -6,11 +6,13 @@ subtitle: Some more info about myself
 
 My name is Connell McGinley.
 
-I live in Belfast, N.Ireland. I work in IT and have been enjoying learning about Cyber Security & Azure.
+I live in Belfast, N.Ireland. I work in IT and have been enjoying learning about Cyber Security & Azure. I love what I do and I try to keep learning more. 
 
 I decided to create this site with some blog posts about my journey through learning Azure & Cyber Security, as well as other stuff.
 
 In December 2019, I completed Azure Fundamentals (AZ-900) and in January 2020, I completed Azure Security (AZ-500).
+
+In June 2020, I attained OSCP.
 
 I am currently studying for Azure Administrator (AZ-104).
 
