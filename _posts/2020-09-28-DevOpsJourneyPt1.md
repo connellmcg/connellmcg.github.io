@@ -110,7 +110,7 @@ This gives us the ability to update the source files and see the changes in the 
 
 ## Docker Compose
 
-docker-compose makes executing docker-run a lot easier, especially for development workflows. If you look at the previous command to start our container, there is a lot going on. `docker run -p 8080:3000 -v /app/node_modules -v $(pwd):/app <image_id>`
+docker-compose makes executing docker run a lot easier, especially for development workflows. If you look at the previous command to start our container, there is a lot going on. `docker run -p 8080:3000 -v /app/node_modules -v $(pwd):/app <image_id>`
 
 By using docker-compose, we can set this command out using a yml file.
 
@@ -122,7 +122,7 @@ By using docker-compose, we can set this command out using a yml file.
           context: .
           dockerfile: Dockerfile.dev
         ports:
-          - "3000:3000"
+          - "8080:3000"
         volumes:
           - /app/node_modules
           - .:/app
