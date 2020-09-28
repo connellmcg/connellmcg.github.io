@@ -126,7 +126,7 @@ By using docker-compose, we can set this command out using a yml file.
         volumes:
           - /app/node_modules
           - .:/app
-          - 
+          
 	  
 Here you can see we are still using the Dockerfile.dev from the current directory (context: .) and the port and volume mappings are clearly defined.
 
