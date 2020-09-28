@@ -7,10 +7,10 @@ comments: true
 ---
 
 
-
 ## A DevOps Learning Journey (Part 1: Docker)
 
-## What is the aim of this
+
+## What is the aim of this:
 
 I wanted to learn a little about DevOps & the technologies and terms around it such as CI/CD, Docker, Kubernetes and so on. It's hard to ignore these terms when you are upskilling in the world of cyber security, so I thought I'd spend time figuring these all out and implementing them. 
 
@@ -18,16 +18,16 @@ This quick fly-by / walkthrough mainly focuses on Docker and getting a simple Re
 
 I followed a brilliant Udemy course, [Docker and Kubernetes: The Complete Guide](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/), to learn more about this and I took notes. This article is built off the notes I took during the course. 
 
-The second part & third parts (coming soon) will delve into the implementation of the workflow and the actions taken when new code is pushed up onto the Github repository.
+The second & third parts (coming soon) will delve into the implementation of the workflow and the actions taken when new code is pushed up onto the Github repository.
 
 Feedback on this is really welcome - please let me know if there are any inaccuracies or areas I have missed/could improve. :)
 
 ## Pre-Requisites
 
-[Node](https://nodejs.org/en/download/)
-[Docker](https://www.docker.com/)
-Your favourite CLI (WSL2/bash etc)
-Eventually AWS, Travis CI and Azure accounts.
+ - [Node](https://nodejs.org/en/download/)
+ - [Docker](https://www.docker.com/) 
+ - Your favourite CLI (WSL2/bash etc)
+ - Eventually AWS, Travis CI and Azure accounts.
 
 ## Why Use Docker 
 
@@ -65,6 +65,7 @@ We could just build the app using a single Dockerfile and upload it, and that wo
     RUN npm install
     COPY . .
     CMD ["npm", "run", "start"]
+    
 Containers are built with base images. There are [many](https://hub.docker.com/search?q=&type=image&category=base) base images that can be chosen, but we have gone with Alpine Linux as the compiled container comes to 5MB in size. This makes it a popular base image for projects. There are other base images that might suit your project, for example [nginx](https://hub.docker.com/_/nginx), which among many things, is a suitable webserver for our project. So we'll use that too.
 
 
@@ -90,6 +91,7 @@ The `-p8080:3000` switch maps the local machine port 8080 to port 3000 inside th
 Some people might tag an image using `docker run -it -p8080:3000 09001a489a76 -t connellmcg/docker-react:latest` - just in case you were wondering if you'd have to work with GUIDs all the time.
 
 If you see this, all is good and we can move on.
+
 ![Docker](https://github.com/connellmcg/connellmcg.github.io/blob/master/img/docker1.png?raw=true)
 
 You can edit `src/App.js` at this point and run `docker build -f Dockerfile.dev .` here to implement your changes. But there is a better way... 
@@ -107,6 +109,7 @@ This gives us the ability to update the source files and see the changes in the 
 
 
 ## Docker Compose
+
 docker-compose makes executing docker-run a lot easier, especially for development workflows. If you look at the previous command to start our container, there is a lot going on. `docker run -p 8080:3000 -v /app/node_modules -v $(pwd):/app <image_id>`
 
 By using docker-compose, we can set this command out using a yml file.
@@ -123,16 +126,38 @@ By using docker-compose, we can set this command out using a yml file.
         volumes:
           - /app/node_modules
           - .:/app
+          - 
+	  
 Here you can see we are still using the Dockerfile.dev from the current directory (context: .) and the port and volume mappings are clearly defined.
 
+To kick off docker-compose, we use the command `docker-compose up` to initiate the container instances using the docker-compose.yml file, and to bring it down, you use `docker-compose down`.
  
 ## Running Tests using docker-compose
 
-## Why Nginx?
+When we move on to using CI technologies like Travis CI, we will be executing tests as part of our workflow. We can implement tests in docker containers also, and use that knowledge to help us build out the tests when we move on to CI.
+
+Our default command in the Dockerfile.dev is  `CMD ["npm", "run", "start"]`
+
+We can override this command by telling the image to run the `npm run test` command by executing `docker run -it <image id> npm run test`
+This issue can be problematic in automated workflows as it requires you to have the `<image id>`  handy. 
+
+To get around this, we can use docker-compose to set out the test conditions.
+We can add on a tests section to the previously created docker-compose.yml file:
+
+    tests:
+      build:
+        context: .
+        dockerfile: Dockerfile.dev
+      volumes:
+        - /app/node_modules
+        - .:/app
+      command: ["npm", "run", "test"]
+
+## Why Nginx? (& Multi Step Builds)
 
 When we run the `npm run start` we are launching a development server that serves up the web files for us to run in our own browser. This is great for our testing and development work, but its definitely not cool for production.  When we do the  `docker run build` command, it compiles without the development server. We need a way to serve these files (as we don't have the dev server in the package any more, d'oh!), and that's where [nginx](https://hub.docker.com/_/nginx) comes into play.
 
-‌We are going to build a new multi-stage docker container for our production code and serve it using nginx. There are two actions happening here. The first is running the `npm run build` command which is compiling our react app, without the dev server, and outputting it into `/app/build`.
+‌We are going to build a new *multi-stage* docker container for our production code and serve it using nginx. There are two actions happening here. The first is running the `npm run build` command which is compiling our react app, without the dev server, and outputting it into `/app/build`.
 
 The second part is pulling down an nginx image and moving the newly built files into the default directory for serving web files in nginx. This configuration setting can be found here. Finally the `EXPOSE 80` command is telling the container to open up port 80 to serve the web requests.
 
@@ -147,7 +172,6 @@ The second part is pulling down an nginx image and moving the newly built files 
     EXPOSE 80
     COPY --from=0 /app/build /usr/share/nginx/html
 
-## Multi Step Docker Builds
 
 
 ## Pushing to Github
@@ -181,7 +205,5 @@ A huge proportion of my learning came from this Udemy course: [Docker and Kubern
 Scott Hanselman's intro to Docker (which kicked off my interest): [Docker 101 Explained: Computer Stuff They Didn't Teach You #8](https://www.youtube.com/watch?v=0oEsMwSxBsk)
 
 [Docker 101 Fundamentals](https://itnext.io/docker-101-fundamentals-the-dockerfile-b33b59d0f14b) by Paige Niedringhaus
-
-
 
 
