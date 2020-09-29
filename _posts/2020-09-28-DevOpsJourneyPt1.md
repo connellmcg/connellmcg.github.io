@@ -12,7 +12,7 @@ comments: true
 
 ## What is the aim of this:
 
-I wanted to learn a little about DevOps & the technologies and terms around it such as CI/CD, Docker, Kubernetes and so on. It's hard to ignore these terms when you are upskilling in the world of cyber security, so I thought I'd spend time figuring these all out and implementing them. 
+I wanted to learn a little about DevOps & the technologies and terms around it such as CI/CD (Continuous Integration/Deployment), Docker, Kubernetes and so on. It's hard to ignore these terms when you are upskilling in the world of cyber security, so I thought I'd spend time figuring these all out and implementing them. 
 
 This quick fly-by / walkthrough mainly focuses on Docker and getting a simple React 'Hello World' app into a container and onto Github.
 
@@ -20,13 +20,12 @@ I followed a brilliant Udemy course, [Docker and Kubernetes: The Complete Guide]
 
 The second & third parts (coming soon) will delve into the implementation of the workflow and the actions taken when new code is pushed up onto the Github repository.
 
-Feedback on this is really welcome - please let me know if there are any inaccuracies or areas I have missed/could improve. :)
 
 ## Pre-Requisites
 
  - [Node](https://nodejs.org/en/download/)
  - [Docker](https://www.docker.com/) 
- - Your favourite CLI (WSL2/bash etc)
+ - Your favourite CLI (Command line interface) (WSL2/bash etc)
  - Eventually AWS, Travis CI and Azure accounts.
 
 ## Why Use Docker 
